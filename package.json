@@ -1,0 +1,22 @@
+{
+    "name": "tech-jobs-salary-scraper",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "Extract real-time tech job listings, verified salaries, tech stacks, and remote positions from NoFluffJobs. Ultra-fast API extraction.",
+    "engines": {
+        "node": ">=22"
+    },
+    "dependencies": {
+        "apify": "^3.7.2",
+        "crawlee": "^3.18.1"
+    },
+    "devDependencies": {
+        "vitest": "^5.0.0"
+    },
+    "scripts": {
+        "start": "node src/main.js",
+        "test": "vitest run"
+    },
+    "author": "vujofix",
+    "license": "Apache-2.0"
+}

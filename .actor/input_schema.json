@@ -1,0 +1,127 @@
+{
+    "$schema": "https://apify.com/schemas/v1/input.ide.json",
+    "title": "Tech Jobs & Salary Benchmark Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "keyword": {
+            "title": "Keyword or Technology",
+            "type": "string",
+            "description": "Filter by job title, technology, or skills (e.g. Python, React, DevOps, AI, AWS, Java). Leave empty to match all.",
+            "editor": "textfield",
+            "default": "Python"
+        },
+        "category": {
+            "title": "Job Category",
+            "type": "string",
+            "description": "Tech category to filter by.",
+            "default": "all",
+            "editor": "select",
+            "enum": [
+                "all",
+                "backend",
+                "frontend",
+                "fullstack",
+                "devops",
+                "mobile",
+                "data",
+                "ai",
+                "qa",
+                "security",
+                "architecture",
+                "product",
+                "management",
+                "other"
+            ],
+            "enumTitles": [
+                "All Categories",
+                "Backend",
+                "Frontend",
+                "Fullstack",
+                "DevOps / Cloud",
+                "Mobile",
+                "Data & Analytics",
+                "AI / Machine Learning",
+                "QA / Testing",
+                "Security",
+                "Architecture",
+                "Product",
+                "Management",
+                "Other"
+            ]
+        },
+        "seniority": {
+            "title": "Seniority Level",
+            "type": "array",
+            "description": "Filter by experience level.",
+            "editor": "select",
+            "default": ["Junior", "Mid", "Senior"],
+            "items": {
+                "type": "string",
+                "enum": ["Trainee", "Junior", "Mid", "Senior", "Expert"]
+            }
+        },
+        "location": {
+            "title": "Location or Remote",
+            "type": "string",
+            "description": "Filter by city or remote positions.",
+            "default": "all",
+            "editor": "select",
+            "enum": [
+                "all",
+                "remote",
+                "warszawa",
+                "krakow",
+                "wroclaw",
+                "gdansk",
+                "poznan",
+                "katowice",
+                "lodz"
+            ],
+            "enumTitles": [
+                "All Locations",
+                "Fully Remote",
+                "Warszawa",
+                "Kraków",
+                "Wrocław",
+                "Gdańsk / Trójmiasto",
+                "Poznań",
+                "Katowice / Silesia",
+                "Łódź"
+            ]
+        },
+        "minSalary": {
+            "title": "Minimum Monthly Salary",
+            "type": "integer",
+            "description": "Filter postings with minimum monthly salary greater than or equal to this amount.",
+            "default": 0,
+            "minimum": 0
+        },
+        "currency": {
+            "title": "Salary Currency",
+            "type": "string",
+            "description": "Currency of the salary.",
+            "default": "all",
+            "editor": "select",
+            "enum": ["all", "PLN", "EUR", "USD", "GBP", "CHF"],
+            "enumTitles": ["All Currencies", "PLN (zł)", "EUR (€)", "USD ($)", "GBP (£)", "CHF"]
+        },
+        "employmentType": {
+            "title": "Contract Type",
+            "type": "string",
+            "description": "B2B contract or Permanent employment (UoP).",
+            "default": "all",
+            "editor": "select",
+            "enum": ["all", "b2b", "permanent"],
+            "enumTitles": ["All Contract Types", "B2B Contract", "Permanent (Employment)"]
+        },
+        "maxResults": {
+            "title": "Maximum Job Postings",
+            "type": "integer",
+            "description": "Maximum number of matched job listings to export.",
+            "default": 100,
+            "minimum": 1,
+            "maximum": 2000
+        }
+    }
+}

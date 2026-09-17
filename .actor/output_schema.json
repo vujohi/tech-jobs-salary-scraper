@@ -1,0 +1,10 @@
+{
+    "$schema": "https://apify.com/schemas/v1/output.ide.json",
+    "actorSpecification": 1,
+    "fields": {
+        "dataset": {
+            "type": "string",
+            "description": "Default dataset containing extracted tech jobs and salary benchmarks"
+        }
+    }
+}

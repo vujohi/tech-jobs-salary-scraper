@@ -1,0 +1,19 @@
+{
+    "$schema": "https://apify.com/schemas/v1/actor.ide.json",
+    "actorSpecification": 1,
+    "name": "tech-jobs-salary-scraper",
+    "title": "Tech Jobs & Salary Benchmark Scraper (NoFluffJobs)",
+    "description": "Extract real-time tech job listings, verified salaries (PLN/EUR/USD), tech stacks, and remote positions from NoFluffJobs. Ultra-fast API extraction.",
+    "version": "1.0",
+    "categories": [
+        "DEVELOPER_TOOLS",
+        "BUSINESS",
+        "JOBS"
+    ],
+    "inputSchema": "./input_schema.json",
+    "outputSchema": "./output_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "../Dockerfile"
+}

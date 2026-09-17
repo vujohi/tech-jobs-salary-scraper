@@ -1,0 +1,86 @@
+{
+    "$schema": "https://apify.com/schemas/v1/dataset.ide.json",
+    "actorSpecification": 1,
+    "fields": {
+        "title": "Job title position",
+        "company": "Company / employer name",
+        "category": "Tech category (e.g. backend, frontend, ai)",
+        "technology": "Primary technology",
+        "requirements": "Required skills and tools list",
+        "seniority": "Seniority level (Junior, Mid, Senior, Expert)",
+        "salaryMin": "Minimum salary amount",
+        "salaryMax": "Maximum salary amount",
+        "salaryCurrency": "Currency of compensation (PLN, EUR, USD)",
+        "salaryType": "Contract type (B2B or Permanent / Employment)",
+        "salaryPeriod": "Pay period (Month, Hour)",
+        "isFullyRemote": "Whether position is 100% remote",
+        "cities": "List of office locations or cities",
+        "url": "Direct URL to the job offer",
+        "postedAt": "ISO date of original posting",
+        "scrapedAt": "ISO timestamp of extraction"
+    },
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": [
+                    "title",
+                    "company",
+                    "technology",
+                    "seniority",
+                    "salaryMin",
+                    "salaryMax",
+                    "salaryCurrency",
+                    "salaryType",
+                    "isFullyRemote",
+                    "url"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "title": {
+                        "label": "Job Title",
+                        "format": "text"
+                    },
+                    "company": {
+                        "label": "Company",
+                        "format": "text"
+                    },
+                    "technology": {
+                        "label": "Technology",
+                        "format": "text"
+                    },
+                    "seniority": {
+                        "label": "Level",
+                        "format": "text"
+                    },
+                    "salaryMin": {
+                        "label": "Min Salary",
+                        "format": "number"
+                    },
+                    "salaryMax": {
+                        "label": "Max Salary",
+                        "format": "number"
+                    },
+                    "salaryCurrency": {
+                        "label": "Currency",
+                        "format": "text"
+                    },
+                    "salaryType": {
+                        "label": "Type",
+                        "format": "text"
+                    },
+                    "isFullyRemote": {
+                        "label": "Remote",
+                        "format": "boolean"
+                    },
+                    "url": {
+                        "label": "Job Link",
+                        "format": "link"
+                    }
+                }
+            }
+        }
+    }
+}
