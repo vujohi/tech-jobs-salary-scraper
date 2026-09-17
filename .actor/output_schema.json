@@ -1,10 +1,12 @@
 {
     "$schema": "https://apify.com/schemas/v1/output.ide.json",
-    "actorSpecification": 1,
-    "fields": {
-        "dataset": {
+    "actorOutputSchemaVersion": 1,
+    "title": "Output schema",
+    "properties": {
+        "results": {
             "type": "string",
-            "description": "Default dataset containing extracted tech jobs and salary benchmarks"
+            "title": "Results",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
         }
     }
 }
